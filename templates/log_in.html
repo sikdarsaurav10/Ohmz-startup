@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Bangers&display=swap" rel="stylesheet">
+
+    <style>
+      @charset "utf-8";
+      body{
+        margin: 1px;
+        background: repeating-linear-gradient(to right, #c31432, #240b36);
+      }
+
+      .box{
+        width: 400px;
+        height: 550px;
+        padding: 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        background: #191919;
+        text-align: center;
+        border-radius: 16px;
+      }
+
+      .box h1{
+        color: white;
+        text-transform: uppercase;
+        font-weight: 500;
+
+      }
+
+      .box input[type="text"],.box input[type="password"]{
+        border: 0;
+        background: none;
+        display: block;
+        margin: 20px auto;
+        text-align: center;
+        border: 2px solid #3498db;
+        padding: 14px 10px;
+        width: 200px;
+        outline: none;
+        color: white;
+        border-radius: 24px;
+        transition: 0.25s;
+      }
+
+      .box input[type="text"]:focus,.box input[type="password"]:focus{
+        width: 280px;
+        border-color: #2ecc71;
+      }
+
+      .box input[type='submit']{
+        border: 0;
+        background: none;
+        display: block;
+        margin: 20px auto;
+        text-align: center;
+        border: 2px solid #2ecc71;
+        padding: 14px 40px;
+        width: 200px;
+        outline: none;
+        color: white;
+        border-radius: 24px;
+        transition: 0.25s;
+        cursor: pointer;
+      }
+
+      .box input[type='submit']:hover {
+        background: #2ecc71;
+      }
+
+      .box p{
+        font-family: 'Bangers', cursive;
+        color: white;
+        font-size: 25px;
+
+      }
+
+      .btn_1{
+        width: 130px;
+        height: 140px;
+        border-radius: 16px;
+        background: url("https://12s1o525xrgk2r8n1g2juoap-wpengine.netdna-ssl.com/wp-content/uploads/2018/04/Megan_Creegan.jpg");
+        background-size: 130px 140px;
+      }
+
+      .btn_2{
+        width: 130px;
+        height: 140px;
+        border-radius: 16px;
+        background: url("https://blog.advids.co/wp-content/uploads//2017/05/customer.jpg");
+        background-size: 130px 140px;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <form class="box" action="index.html" method="post">
+      <h1>Login</h1>
+      <div class="row">
+        <div class="col">
+          <button type="button" class="btn_1" name="customer" value="customer"></button>
+          <p>Customer</p>
+        </div>
+        <div class="col">
+          <button type="button" class="btn_2"name="merchant" value="merchant"></button>
+          <p>Merchant</p>
+        </div>
+      </div>
+      <input type="text" name="" value="" placeholder="Username">
+      <input type="password" name="" value="" placeholder="password">
+      <input type="submit" name="" value="Login">
+      <div class="row">
+        <div class="col">
+          <a href="#" style="margin-left: 40px;">Forgot Password?</a>
+        </div>
+        <div class="col">
+          <a href="{{"home"}}" style="color:white;">Go Back</a>
+        </div>
+      </div>
+      <br>
+      <p></p>
+      <a href="#" style="color: white;">Still not a member? Sign Up!</a>
+      <hr>
+    </form>
+
+
+
+  </body>
+</html>

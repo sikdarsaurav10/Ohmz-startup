@@ -1,0 +1,1428 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Online Home Maintaince & Services </title>
+
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=GFS+Didot&display=swap" rel="stylesheet">
+    <script src="https://use.fontawesome.com/f32a9d3689.js"></script>
+
+
+    <style>
+
+    .navbar-brand{
+      font-size: 45px;
+      font-family: math;
+    }
+
+    .navbar {
+       background-color: rgba(255,255,255,.0);
+       padding: 90px 10px; /* Large padding which will shrink on scroll (using JS) */
+       transition: 0.4s; /* Adds a transition effect when the padding is decreased */
+       position: fixed; /* Sticky/fixed navbar */
+       width: 100%;
+       top: 0; /* At the top */
+       z-index: 99;
+       display: flex;
+     }
+
+    img#nav-icon{
+      height: 60px;
+      width: 60px;
+      border-radius: 50px;
+    }
+
+    .masthead {
+      height: 100vh;
+      min-height: 500px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap');
+
+    .py-5{
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: rgba(181, 179, 174.0.9);
+      font-family: 'Poppins' , sans-serif;
+    }
+     #head_1{
+      width: 100%;
+      min-height: 2em;
+      position: fixed;
+      text-align: left;
+      margin-top: 1em;
+      font-family: 'GFS Didot', serif;
+    }
+
+    #head_2{
+      width: 100%;
+      min-height: 2em;
+      position: absolute;
+      margin-top: -10em;
+      font-family: 'GFS Didot', serif;
+    }
+
+    #head_3{
+      width: 100%;
+      min-height: 2em;
+      position: absolute;
+      margin-top: -4em;
+      color: #fff;
+      padding-left: 30px;
+      font-family: 'GFS Didot', serif;
+
+    }
+
+    .py-5 .container{
+      position: relative;
+      width: 1000px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+
+    .py-5 .container .cards{
+      margin-top: 6em;
+      border-radius: 7px;
+      position: relative;
+      width: 300px;
+      height: 400px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 10px 20px 20px rgba(4, 35, 138, 0.7);
+    }
+
+    .py-5 .container .cards:before
+    {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50%;
+      height: 100%;
+      background: rgba(255,255,255,0.1);
+      z-index: 20;
+      pointer-events: none;
+    }
+
+    .py-5 .container .cards:nth-child(2)
+    {
+
+      background: url({{url_for('static',filename='images/phone_1.jpg')}});
+    }
+    .py-5 .container .cards:nth-child(3)
+    {
+      background: url('https://images.unsplash.com/photo-1548345680-f5475ea5df84?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60');
+
+    }
+    .py-5 .container .cards:nth-child(4)
+    {
+      background: url({{url_for('static',filename='images/door_service.jpg')}});
+    }
+
+    .py-5 .imgBx img{
+      height:100px;
+      width: 100px;
+    }
+
+    .py-5 .container .cards .imgBx{
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .py-5 .container .cards .imgBx h2{
+      margin: 10px 0 0;
+      padding: 0;
+      color: #000000;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+   .py-5 .container .cards .overlay{
+      position: absolute;
+      margin-top: 10em;
+      border: 20px;
+      right: 20px;
+      width: 50px;
+      height: 50px;
+      background: #fff;
+      box-shadow: 0 3px 5px rgba(0,0,0,1);
+      cursor: pointer;
+      border-radius: 50%;
+      transition: 0.5s;
+    }
+
+    .py-5 .container .cards .overlay:hover
+    {
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      box-shadow: none;
+      opacity: 0.9;
+      border-radius: 0;
+    }
+
+    .py-5 .container .cards .overlay:before
+    {
+      content: 'Read';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      color: #000000;
+      font-size: 12px;
+      text-transform: uppercase;
+      font-weight: 500;
+      letter-spacing: 1px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition-delay: 0.5s;
+
+    }
+
+    .py-5 .container .cards .overlay:hover:before
+    {
+      display: none;
+      transition-delay: 0s;
+    }
+
+    .py-5 .container .cards .content
+    {
+      padding: 20px;
+      box-sizing: border-box;
+      z-index: 1;
+      pointer-events: none;
+      opacity: 0;
+      visibility: hidden;
+      transition: 0s;
+      color: #000000;
+    }
+
+    .py-5 .container .cards .overlay:hover ~ .content
+    {
+      opacity: 1;
+      visibility: visible;
+      transition: 0.2s;
+      transition-delay: 0.5s;
+
+    }
+
+    .py-5 .container .cards .content h2{
+      margin: 0;
+      padding: 0;
+    }
+
+    .item {
+      width: 200px;
+      height: 200px;
+      margin: 50px auto;
+      padding-top: 75px;
+      background: #ccc;
+      text-align: center;
+      color: #FFF;
+      font-size: 3em;
+    }
+
+    .services{
+      margin: 0;
+      padding: 0;
+      min-height: 120vh;
+      background: linear-gradient(to right, #FFEFBA, #FFFFFF);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: consolas;
+    }
+
+    .services .container{
+      width: 1000px;
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .services .container .card{
+      position: relative;
+      background: rgba(51, 51, 51, 0);
+      border: 0;
+    }
+
+    .services .container .card .face{
+      width: 300px;
+      height: 200px;
+      transition: 0.5s;
+      border-radius: 10px;
+    }
+
+    .services .container .card .face.face1{
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1;
+      transform: translateY(100px);
+    }
+
+    .services .container .card:hover .face.face1{
+      background: #ff0057;
+      transform: translateY(0);
+    }
+
+    .services .container .card .face.face1 .content{
+      opacity: 0;
+      transition: 0.5s;
+    }
+
+    .services .container .card:hover .face.face1 .content{
+      opacity: 1;
+    }
+
+    .services .container .card .face.face1 .content img{
+      max-width: 1000px;
+      height: 200px;
+      width: 300px;
+      border-radius: 10px;
+    }
+
+    .services .container .card .face.face1 .content h3{
+       margin: 10px 0 0;
+       padding: 0;
+       color: #fff;
+       text-align: center;
+       font-size: 1.5em;
+    }
+    .services .container .card .face.face2{
+      position: relative;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      box-sizing: border-box;
+      box-shadow: 10px 20px 20px rgba(240, 232, 5, 0.8);
+      transform: translateY(-100px);
+    }
+
+    .services .container .card:hover .face.face2{
+      transform: translateY(0);
+    }
+
+    .services .container .card .face.face2 p{
+      margin: 0;
+      padding: 0;
+    }
+
+    .services .container .card .face.face2 .content a{
+      margin: 15px 0 0;
+      display: inline-block;
+
+      text-decoration: none;
+      font-weight: 900;
+      color: #333;
+      padding: 5px;
+      border: 1px solid #333;
+    }
+
+    .services .container .card .face.face2 .content a:hover {
+      background: #333;
+      color: #fff;
+
+    }
+
+    .test{
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      background: linear-gradient(to right, #FF0099, #493240);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .test .container{
+      width: 1000px;
+      margin-right: 14em;
+      margin-bottom: 10em;
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+    }
+
+    .test .container #main{
+      position: absolute;
+      top: 35%;
+      left: 45%;
+    }
+
+    .test .container #main #c_1{
+      display: flex;
+      height: 250px;
+      width: 200px;
+      position: absolute;
+      transform: translateX(0px) scale(1.5);
+      z-index: 99;
+      border: 2px solid grey;
+      transition: all 0.5s;
+    }
+
+
+    .test .container #main #c_2{
+      display: flex;
+      height: 250px;
+      width: 200px;
+      position: absolute;
+      transform: translateX(-150px);
+      z-index: 9;
+      border: 2px solid grey;
+      transition: all 0.5s;
+    }
+
+    .test .container #main #c_3{
+      display: flex;
+      height: 250px;
+      width: 200px;
+      position: absolute;
+      transform: translateX(150px);
+      z-index: 9;
+      border: 2px solid grey;
+      transition: all 0.5s;
+    }
+
+    .test .container #main #c_1:hover{
+      box-shadow: 2px 7px 10px black;
+    }
+
+    .test .container #main #c_2:hover{
+      box-shadow: 2px 15px 15px black;
+    }
+
+    .test .container #main #c_3:hover{
+      box-shadow: 2px 15px 15px black;
+    }
+
+    .test .container #pre{
+      display: flex;
+      height: 30px;
+      width: 110px;
+      background-color: white;
+      border: 2px solid black;
+      font-family: Comic Sans, Comic Sans MS, cursive;
+      font-size: 17px;
+      font-weight: bold;
+      color: black;
+      justify-content: center;
+      line-height: 30px;
+      position: absolute;
+      top: 50%;
+      left: 8%;
+      border-radius: 16px;
+    }
+
+    .test .container #pre:hover{
+      cursor: pointer;
+    }
+
+    .test .container #nex{
+      display: flex;
+      height: 30px;
+      width: 110px;
+      background-color: white;
+      border: 2px solid black;
+      font-family: Comic Sans, Comic Sans MS, cursive;
+      font-size: 17px;
+      color: black;
+      justify-content: center;
+      line-height: 30px;
+      position: absolute;
+      top: 50%;
+      right: 1%;
+      border-radius: 16px;
+    }
+
+    .test .container #nex:hover{
+      cursor: pointer;
+    }
+
+    #col_1{
+      margin-left:6em;
+    }
+
+    #nav-item_1{
+      margin-left: 5em;
+      overflow: auto;
+    }
+
+    #nav-item_2{
+      padding-left: 30px;
+    }
+
+    #topBtn{
+      position: fixed;
+      bottom: 40px;
+      right: 40px;
+      width: 50px;
+      height: 50px;
+      color: rgba(16, 30, 230,0.9);
+      border: none;
+      cursor: pointer;
+      display: none;
+      box-shadow: 1px 2px 2px 2px black;
+      border-radius: 50%;
+    }
+
+    .fa-angle-up{
+      position: fixed;
+      bottom: 42px;
+      right: 50px;
+      font-size: 50px;
+    }
+
+
+.prof_pic{
+  font-family: 'Open Sans', sans-serif;
+  background: #333;
+  margin: 0;
+  padding: 0;
+  min-height: 120vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.prof_pic .container {
+  max-width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.prof_pic .container .card-wrapper {
+  width: 300px;
+  height: 500px;
+  position: relative;
+  display: flex;
+  margin-top: 30px;
+}
+
+.prof_pic .container .card-wrapper .card {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 500px;
+  transform: translate(-50%, -50%);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+  transition: 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.prof_pic .container .card-wrapper .card .card-image {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-color: #000;
+  transition: .5s;
+  display: flex;
+}
+
+.prof_pic .container .card-wrapper .card .card-image:hover img {
+  opacity: 0.4;
+  transition: .5s;
+}
+
+.prof_pic .container .card-wrapper .card:hover .card-image {
+  transform: translateY(-100px);
+  transition: all .9s;
+}
+
+.social-icons {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  display: flex;
+}
+.social-icons li {
+  list-style: none;
+}
+
+.social-icons li a {
+  position: relative;
+  display: block;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  background: #fff;
+  font-size: 23px;
+  color: #333;
+  font-weight: bold;
+  margin: 0 6px;
+  transition: .4s;
+  transform: translateY(200px);
+  opacity: 0;
+  border-radius: 50%;
+}
+
+.prof_pic .container .card-wrapper .card:hover .social-icons li a {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+.social-icons li a:hover {
+  background: #000;
+  transition: .2s;
+}
+
+.social-icons li a:hover .fab {
+  color: #fff;
+}
+
+.social-icons li a .fab {
+  transition: .8s;
+}
+
+.social-icons li a .fab:hover {
+    transform: rotateY(360deg);
+    color: #fff;
+}
+
+.prof_pic .container .card-wrapper .card:hover li:nth-child(1) a {
+    transition-delay: 0.1s;
+}
+.prof_pic .container .card-wrapper .card:hover li:nth-child(2) a {
+  transition-delay: 0.2s;
+}
+.prof_pic .container .card-wrapper .card:hover li:nth-child(3) a {
+  transition-delay: 0.3s;
+}
+.prof_pic .container .card-wrapper .card:hover li:nth-child(4) a {
+  transition-delay: 0.4s;
+  margin-right: 40px;
+}
+
+
+.details {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #fff;
+  width: 100%;
+  height: 120px;
+  z-index: 1;
+  padding: 10px;
+}
+
+.details h2 {
+  margin: 30px 0;
+  padding: 0;
+  text-align: center;
+}
+
+
+.details h2 .job-title {
+      font-size: 1rem;
+      line-height: 2.5rem;
+      color: #333;
+      font-weight: 300;
+  }
+
+
+/*/////////////////////////////////////////////////*/
+.footer-distributed{
+	background-color: #292c2f;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: bold 16px sans-serif;
+	padding: 55px 50px;
+}
+
+.footer-distributed .footer-left, .footer-distributed .footer-center, .footer-distributed .footer-right{
+	display: inline-block;
+	vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+	width: 40%;
+}
+
+/* The company logo */
+
+.footer-distributed h3{
+	color:  #ffffff;
+	font: normal 36px 'Cookie', cursive;
+	margin: 0;
+}
+
+.footer-distributed h3 span{
+	color:  #5383d3;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+	color:  #ffffff;
+	margin: 20px 0 12px;
+	padding: 0;
+}
+
+.footer-distributed .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+	color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+	color:  #8f9296;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center{
+	width: 35%;
+}
+
+.footer-distributed .footer-center i{
+	background-color:  #33383b;
+	color: #ffffff;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+	font-size: 17px;
+	line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+	display: inline-block;
+	color: #ffffff;
+	vertical-align: middle;
+	margin:0;
+}
+
+.footer-distributed .footer-center p span{
+	display:block;
+	font-weight: normal;
+	font-size:14px;
+	line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+	color:  #5383d3;
+	text-decoration: none;;
+}
+
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+	width: 20%;
+}
+
+.footer-distributed .footer-company-about{
+	line-height: 20px;
+	color:  #92999f;
+	font-size: 13px;
+	font-weight: normal;
+	margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+	display: block;
+	color:  #ffffff;
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons{
+	margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  #33383b;
+	border-radius: 2px;
+
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+
+/*////////////////////////////////////////////////*/
+
+#logo_img{
+  height: 7em;
+  width: 20em;
+}
+
+
+
+    @media only screen and (max-width:800px)  {
+      /* for tablets */
+      .masthead, .py-5, .py-5 .container,.py-5 .container .cards{
+        width: 100%;
+      }
+      .py-5 .container,.py-5 .container .cards{
+        justify-content: center;
+      }
+
+      .services, #serv, .services .container .cards{
+        width: 100%;
+      }
+
+      #serv, .services .container .cards{
+        justify-content: center;
+      }
+      #col_1{
+        margin-left:0;
+      }
+      #nav-item_1{
+        margin-left: 0;
+        overflow: auto;
+      }
+
+      #nav-item_2{
+        padding-left: 0;
+      }
+
+      .test, .test .container, .test .container #head_2, .test .container #main{
+        width: 100%;
+      }
+
+      .test .container #head_2, .test .container #main{
+        justify-content: center;
+      }
+
+      .prof_pic,  .prof_pic .container, .prof_pic .container .card-wrapper,.prof_pic .container .card-wrapper .card{
+        width: 100%;
+      }
+      .footer-distributed{
+    		font: bold 14px sans-serif;
+    	}
+
+    	.footer-distributed .footer-left, .footer-distributed .footer-center, .footer-distributed .footer-right{
+    		display: block;
+    		width: 100%;
+    		margin-bottom: 40px;
+    		text-align: center;
+    	}
+
+    	.footer-distributed .footer-center i{
+    		margin-left: 0;
+    	}
+
+
+    }
+
+    </style>
+
+  </head>
+  <body>
+
+
+<!-- navabar -->
+
+<header class="masthead" style="background-image: url({{ url_for('static', filename='images/back-imag.png') }});">
+  <nav id="custom-nav" class="nav navbar navbar-expand-lg navbar-light navbar-default navbar-fixed-top">
+    <a class="navbar-brand" href="#">
+      <img src="{{url_for('static',filename='images/nav-icon.jpg')}}" width="30" height="30" class="d-inline-block align-top" id="nav-icon" alt="">
+      <strong >Ohmz</strong>
+    </a>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item dropdown ml-auto">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <img src="{{url_for('static',filename='images/nav-icon1.png')}}" width="30" height="30" class="d-inline-block align-top" alt="">
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="overflow: auto;">
+        <a class="dropdown-item" href="{{"login"}}">Login</a>
+        <a class="dropdown-item" href="#">Sign Up</a>
+        </div>
+      </li>
+    </ul>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav mx-auto order-0 navcenter">
+        <li class="nav-item active" id="nav-item_1">
+          <a class="nav-link" href="#first"><strong>About</strong><span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active" id="nav-item_2">
+          <a class="nav-link" href="#second"><strong>Services</strong></a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#third"><strong>Contact</strong></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <div class="container h-100">
+    <div class="row h-100 align-items-center">
+      <div class="col-12 text-center">
+        <h1 class="font-weight-light">A Service Based startup </h1>
+        <p class="lead">Bringing Services To Your Doorstep</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Page Content -->
+<section class="py-5" id="first">
+    <div class="container" data-aos="slide-up">
+    <div id="head_1">
+        <h3 style="font-size: 40px;font-weight: bold;">About</h3>
+        <hr>
+      </div>
+      <div class="cards">
+        <div class="imgBx">
+          <div>
+            <h2>SELECT</h2>
+          </div>
+        </div>
+        <div class="overlay"></div>
+        <div class="content">
+          <h2>design</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+        </div>
+      </div>
+      <div class="cards">
+        <div class="imgBx">
+          <div>
+            <h2>lOCATE</h2>
+          </div>
+        </div>
+        <div class="overlay"></div>
+        <div class="content">
+          <h2>design</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+      </div>
+      <div class="cards">
+        <div class="imgBx">
+          <div>
+            <h2>AT DOOR</h2><br>
+            <h2>sERVICE</h2>
+          </div>
+        </div>
+        <div class="overlay"> </div>
+        <div class="content">
+          <h2>design</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+      </div>
+    </div>
+</section>
+
+<section class="services" id="second">
+  <div class="container" data-aos="slide-up" id="serv">
+    <div id="head_1">
+        <h3 style="font-size: 40px;font-weight: bold;">Services</h3>
+        <hr>
+      </div>
+    <div class="row">
+      <div class="col">
+        <div class="card" >
+          <div class="face face1" style="background: url({{url_for('static',filename='images/elc.jpg')}});">
+            <div class="content">
+              <img src="{{url_for('static',filename='images/electrician.jpg')}}" alt="">
+
+            </div>
+          </div>
+          <div class="face face2">
+            <div class="content">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              <a href="#">Read More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <div class="face face1" style="background: url({{url_for('static',filename='images/plum.jpg')}});">
+            <div class="content">
+              <img src="{{url_for('static',filename='images/plumber.jpg')}}">
+
+            </div>
+          </div>
+          <div class="face face2">
+            <div class="content">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              <a href="#">Read More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card ">
+          <div class="face face1" style="background: url({{url_for('static',filename='images/pain.jpg')}});">
+            <div class="content">
+              <img src="{{url_for('static',filename='images/painter.jpg')}}" alt="" >
+
+            </div>
+          </div>
+          <div class="face face2">
+            <div class="content">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              <a href="#">Read More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="w-100"></div>
+      <div class="col" id="col_1">
+        <div class="card">
+          <div class="face face1" style="background: url({{url_for('static',filename='images/carp.jpg')}});">
+            <div class="content">
+              <img src="{{url_for('static',filename='images/carpenter.jpg')}}" alt="">
+
+            </div>
+          </div>
+          <div class="face face2">
+            <div class="content">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              <a href="#">Read More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card" style="margin-right: 20px;">
+          <div class="face face1" style="background: url({{url_for('static',filename='images/pest.jpg')}});">
+            <div class="content">
+              <img src="{{url_for('static',filename='images/pest_control.jpg')}}" alt="">
+
+            </div>
+          </div>
+          <div class="face face2">
+            <div class="content">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              <a href="#">Read More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+
+</section>
+
+<section class="test">
+  <div class="container" data-aos="slide-up">
+    <div id="head_2">
+        <h3 style="font-size: 40px;font-weight: bold;">Testimonials</h3>
+        <hr>
+      </div>
+        <div id="pre">
+          PREVIOUS
+        </div>
+        <div id="main">
+          <div id="c_1">
+            <img src="{{url_for('static',filename="images/test_1.jpg")}}" alt="" height="100%" width="100%"/>
+          </div>
+          <div id="c_2">
+            <img src="{{url_for('static',filename="images/test_2.jpg")}}" alt="" height="100%" width="100%"/>
+          </div>
+          <div id="c_3">
+            <img src="{{url_for('static',filename="images/test_3.jpg")}}" alt="" height="100%" width="100%"/>
+          </div>
+        </div>
+        <div id="nex">
+          NEXT
+        </div>
+  </div>
+</section>
+
+<section class="prof_pic">
+  <div class="container" data-aos="slide-up">
+    <div id="head_3">
+        <h3 style="font-size: 50px;">Our Team</h3>
+        <hr>
+      </div>
+    <div class="card-wrapper">
+      <div class="card">
+        <div class="card-image">
+          <img src="{{url_for('static',filename="images/prof_1.jpg")}}" alt="profile one">
+        </div>
+        <ul class="social-icons">
+          <li>
+            <a href="">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+          </li>
+        <li>
+          <a href="">
+            <i class="fab fa-instagram"></i>
+          </a>
+      </li>
+      <li>
+        <a href="">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <i class="fab fa-dribbble"></i>
+        </a>
+      </li>
+    </ul>
+    <div class="details">
+      <h2>Saurav Sikdar
+        <br>
+        <span class="job-title">Co-Founder</span>
+      </h2>
+    </div>
+  </div>
+</div><!-- end box wrapper -->
+<div class="card-wrapper">
+  <div class="card">
+    <div class="card-image">
+      <img src="{{url_for('static',filename="images/prof_3.jpg")}}" alt="profile one">
+    </div>
+    <ul class="social-icons">
+      <li>
+        <a href="">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+      </li>
+    <li>
+      <a href="">
+        <i class="fab fa-instagram"></i>
+      </a>
+  </li>
+  <li>
+    <a href="">
+      <i class="fab fa-twitter"></i>
+    </a>
+  </li>
+  <li>
+    <a href="">
+      <i class="fab fa-dribbble"></i>
+    </a>
+  </li>
+</ul>
+<div class="details">
+  <h2>Rohan Tomar
+    <br>
+    <span class="job-title">Co-Founder</span>
+  </h2>
+</div>
+</div>
+</div><!-- end box wrapper -->
+<div class="card-wrapper">
+  <div class="card">
+    <div class="card-image">
+      <img src="{{url_for('static',filename="images/prof_2.jpg")}}" alt="profile one">
+    </div>
+    <ul class="social-icons">
+      <li>
+        <a href="">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+      </li>
+    <li>
+      <a href="">
+        <i class="fab fa-instagram"></i>
+      </a>
+  </li>
+  <li>
+    <a href="">
+      <i class="fab fa-twitter"></i>
+    </a>
+  </li>
+  <li>
+    <a href="">
+      <i class="fab fa-dribbble"></i>
+    </a>
+  </li>
+</ul>
+<div class="details">
+  <h2>Prince Dwivedi
+    <br>
+    <span class="job-title">Co-Founder</span>
+  </h2>
+</div>
+</div>
+</div><!-- end box wrapper -->
+<div class="card-wrapper">
+  <div class="card">
+    <div class="card-image">
+      <img src="{{url_for('static',filename="images/prof_4.jpg")}}" alt="profile one">
+    </div>
+    <ul class="social-icons">
+      <li>
+        <a href="">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+      </li>
+    <li>
+      <a href="">
+        <i class="fab fa-instagram"></i>
+      </a>
+  </li>
+  <li>
+    <a href="">
+      <i class="fab fa-twitter"></i>
+    </a>
+  </li>
+  <li>
+    <a href="">
+      <i class="fab fa-dribbble"></i>
+    </a>
+  </li>
+</ul>
+<div class="details">
+  <h2>Piyush kumar
+    <br>
+    <span class="job-title">Co-Founder</span>
+  </h2>
+</div>
+</div>
+</div><!-- end box wrapper -->
+</div><!-- END container -->
+</section>
+
+<footer class="footer-distributed" id="third">
+			<div class="footer-left">
+				<img src="{{url_for('static',filename='images/logo_1.png')}}" id="logo_img" alt="">
+				<p class="footer-links">
+					<a href="#">Home</a>
+					·
+					<a href="#">Blog</a>
+					·
+					<a href="#">Pricing</a>
+					·
+					<a href="#">About</a>
+					·
+					<a href="#">Faq</a>
+					·
+					<a href="#">Contact</a>
+				</p>
+				<p class="footer-company-name">Online Home Maintaince and Services &copy; 2020</p>
+			</div>
+			<div class="footer-center">
+				<div>
+					<i class="fa fa-map-marker"></i>
+					<p><span>Sudhowala, Dehradun</span> Uttrakhand, India</p>
+				</div>
+				<div>
+					<i class="fa fa-phone"></i>
+					<p>+91 999 XXX XXXX</p>
+				</div>
+				<div>
+					<i class="fa fa-envelope"></i>
+					<p><a href="#">SupportEmail@support.com</a></p>
+				</div>
+			</div>
+			<div class="footer-right">
+				<p class="footer-company-about">
+					<span>About the company</span>
+					Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.
+				</p>
+				<div class="footer-icons">
+					<a href="#"><i class="fa fa-facebook"></i></a>
+					<a href="#"><i class="fa fa-twitter"></i></a>
+					<a href="#"><i class="fa fa-linkedin"></i></a>
+					<a href="#"><i class="fa fa-github"></i></a>
+				</div>
+			</div>
+		</footer>
+
+
+<!--triger-->
+<section class="trigger">
+  <button id="topBtn"><i class="fas fa-angle-up" aria-hidden="true"></i></button>
+</section>
+
+
+
+
+
+
+
+
+    <!-- javascript file -->
+    <script type="text/javascript">
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+        document.getElementById("custom-nav").style.background = "rgb(194, 150, 227, .5)";
+        document.getElementById("custom-nav").style.padding = "10px 10px";
+      } else {
+        document.getElementById("custom-nav").style.background = "rgba(255,255,255,.0)";
+        document.getElementById("custom-nav").style.padding = "30px 10px";
+      }
+    }
+
+
+    AOS.init({
+  duration: 1200,
+})
+
+    </script>
+  <!--  <script src="{{url_for('static',filename='js/custom_1.js')}}"></script>-->
+  <script>
+  $(document).ready(function(){
+     flag=1;
+      $("#nex").click(function(){
+         if(flag==0)
+          {
+              $("#c_1").css("z-index","999");
+              $("#c_2").css("z-index","9");
+              $("#c_3").css("z-index","9");
+              $("#c_1").css("transform","translateX(0px) scale(1.5)");
+              $("#c_2").css("transform","translateX(-150px) scale(1)");
+              $("#c_3").css("transform","translateX(150px)");
+              flag=1;
+          }
+          else if(flag==1)
+          {
+              $("#c_3").css("z-index","999");
+              $("#c_2").css("z-index","9");
+              $("#c_1").css("z-index","9");
+              $("#c_3").css("transform","translateX(0px) scale(1.5)");
+              $("#c_1").css("transform","translateX(-150px) scale(1)");
+              $("#c_2").css("transform","translateX(150px)");
+              flag=2;
+          }
+          else if(flag==2)
+          {
+              $("#c_2").css("z-index","999");
+              $("#c_3").css("z-index","9");
+              $("#c_1").css("z-index","9");
+              $("#c_2").css("transform","translateX(0px) scale(1.5)");
+              $("#c_3").css("transform","translateX(-150px) scale(1)");
+              $("#c_1").css("transform","translateX(150px)");
+              flag=0;
+          }
+      });
+      $("#pre").click(function(){
+         if(flag==0)
+          {
+              $("#c_3").css("z-index","999");
+              $("#c_2").css("z-index","9");
+              $("#c_1").css("z-index","9");
+              $("#c_3").css("transform","translateX(0px) scale(1.5)");
+              $("#c_1").css("transform","translateX(-150px) scale(1)");
+              $("#c_2").css("transform","translateX(150px)");
+              flag=2;
+          }
+          else if(flag==1)
+          {
+              $("#c_2").css("z-index","999");
+              $("#c_3").css("z-index","9");
+              $("#c_1").css("z-index","9");
+              $("#c_2").css("transform","translateX(0px) scale(1.5)");
+              $("#c_3").css("transform","translateX(-150px) scale(1)");
+              $("#c_1").css("transform","translateX(150px)");
+              flag=0;
+          }
+          else if(flag==2)
+          {
+              $("#c_1").css("z-index","999");
+              $("#c_2").css("z-index","9");
+              $("#c_3").css("z-index","9");
+              $("#c_1").css("transform","translateX(0px) scale(1.5)");
+              $("#c_2").css("transform","translateX(-150px) scale(1)");
+              $("#c_3").css("transform","translateX(150px)");
+              flag=1;
+          }
+      });
+
+      $(window).scroll(function(){
+        if($(this).scrollTop() > 40){
+          $('#topBtn').fadeIn();
+        }else{
+          $('#topBtn').fadeOut();
+        }
+      })
+
+
+        $("#topBtn").click(function(){
+          $('html,body').animate({scrollTop : 0},800)
+        });
+
+  });
+
+  </script>
+
+  </body>
+</html>

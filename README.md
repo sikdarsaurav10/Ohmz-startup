@@ -1,0 +1,2 @@
+# Ohmz-startup
+ service startup
